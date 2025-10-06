@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+{% extends "employees/base.html" %}
+{% load static %}
+{% block content %}
+<div class="form-container">
+    <h2>Admin Login</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    <p>Don’t have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+</div>
+{% endblock %}
+
+    </body>
+</html>

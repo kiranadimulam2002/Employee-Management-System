@@ -1,0 +1,40 @@
+{% extends 'employees/base.html' %}
+{% block title %}{{ employee.name }} - Profile{% endblock %}
+
+{% block content %}
+<div class="card p-4 shadow-sm">
+    <h2>{{ employee.name }}</h2>
+    <p><strong>Employee ID:</strong> {{ employee.emp_id }}</p>
+    <p><strong>Department:</strong> {{ employee.department }}</p>
+
+    <h4 class="mt-4">Salary History</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Basic</th>
+                <th>HRA</th>
+                <th>Allowances</th>
+                <th>Deductions</th>
+                <th>Net Salary</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for salary in salaries %}
+            <tr>
+                <td>{{ salary.basic }}</td>
+                <td>{{ salary.hra }}</td>
+                <td>{{ salary.allowances }}</td>
+                <td>{{ salary.deductions }}</td>
+                <td>{{ salary.net_salary }}</td>
+                <td>{{ salary.created_at|date:"d M Y" }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" class="text-center">No salary records yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
