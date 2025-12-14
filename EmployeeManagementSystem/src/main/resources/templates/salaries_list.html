@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salaries - EMS</title>
+
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">EMS</div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="employees_list.html">Employees</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+
+            <div class="mobile-menu" id="menuBtn">&#9776;</div>
+        </div>
+    </nav>
+
+    <ul class="mobile-nav" id="mobileNav">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="employees_list.html">Employees</a></li>
+        <li><a href="login.html">Logout</a></li>
+    </ul>
+
+    <!-- HEADER SECTION -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-left">
+                <h1>Employee Salaries</h1>
+                <p class="muted">Overview of salaries across all organizations</p>
+            </div>
+
+            <div class="header-right">
+                <input id="salarySearch" type="search" placeholder="Search employee or email" />
+
+                <select id="salaryOrgFilter">
+                    <option value="">All Organizations</option>
+                    <option value="Maple Tech Solutions">Maple Tech Solutions</option>
+                    <option value="Cloud Technologies">Cloud Technologies</option>
+                </select>
+
+                <select id="salaryDeptFilter">
+                    <option value="">All Departments</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALARY TABLE -->
+    <section class="content-section">
+        <div class="container table-container">
+
+            <table class="table" id="salaryTable">
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Role</th>
+                        <th>Salary</th>
+                        <th>Organization</th>
+                        <th class="actions-col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- Example Row 1 -->
+                    <tr>
+                        <td>Asha Reddy</td>
+                        <td>asha@mapletech.com</td>
+                        <td>Engineering</td>
+                        <td>Software Engineer</td>
+                        <td>₹75,000</td>
+                        <td>Maple Tech Solutions</td>
+                        <td class="actions-col">
+                            <a href="salary_management.html" class="action view">View</a>
+                            <a href="salary_management.html" class="action edit">Increment</a>
+                            <a href="payslip.html" class="action view">Payslip</a>
+                        </td>
+                    </tr>
+
+                    <!-- Example Row 2 -->
+                    <tr>
+                        <td>Rahul Kumar</td>
+                        <td>rahul@cloudtech.com</td>
+                        <td>Sales</td>
+                        <td>Sales Executive</td>
+                        <td>₹52,000</td>
+                        <td>Cloud Technologies</td>
+                        <td class="actions-col">
+                            <a href="salary_management.html" class="action view">View</a>
+                            <a href="salary_management.html" class="action edit">Increment</a>
+                            <a href="payslip.html" class="action view">Payslip</a>
+                        </td>
+                    </tr>
+
+                    <!-- Example Row 3 -->
+                    <tr>
+                        <td>Priya Singh</td>
+                        <td>priya@mapletech.com</td>
+                        <td>HR</td>
+                        <td>HR Manager</td>
+                        <td>₹65,000</td>
+                        <td>Maple Tech Solutions</td>
+                        <td class="actions-col">
+                            <a href="salary_management.html" class="action view">View</a>
+                            <a href="salary_management.html" class="action edit">Increment</a>
+                            <a href="payslip.html" class="action view">Payslip</a
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <p>© 2025 EMS - Employee Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

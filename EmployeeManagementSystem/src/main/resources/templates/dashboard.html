@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - EMS</title>
+
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">EMS</div>
+
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+
+        <div class="mobile-menu" id="menuBtn">&#9776;</div>
+      </div>
+    </nav>
+
+    <ul class="mobile-nav" id="mobileNav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+
+    <!-- DASHBOARD WRAPPER -->
+    <div class="dashboard-wrapper">
+      <!-- ORG HEADER -->
+      <div class="org-header">
+        <h1>Welcome to EMS Dashboard</h1>
+        <p>Organization: <span class="org-name">Maple Tech Solutions</span></p>
+      </div>
+
+      <!-- DASHBOARD CARDS -->
+      <div class="dashboard-cards">
+        <div class="dash-card">
+          <div class="dash-icon">👨‍💼</div>
+          <h3>Employees</h3>
+          <p>View, add and manage all employees.</p>
+          <a href="employees_list.html" class="dash-btn">Manage</a>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-icon">💵</div>
+          <h3>Salary</h3>
+          <p>Track salaries, increments and payroll data.</p>
+          <a href="salaries_list.html" class="dash-btn">View Salaries</a>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-icon">📊</div>
+          <h3>Analytics</h3>
+          <p>Get insights on employee and organization performance.</p>
+          <a href="analytics.html" class="dash-btn">View Reports</a>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-icon">⚙️</div>
+          <h3>Settings</h3>
+          <p>Update profile, organization or security settings.</p>
+          <a href="settings.html" class="dash-btn">Open Settings</a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>© 2025 EMS - Employee Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+  </body>
+</html>

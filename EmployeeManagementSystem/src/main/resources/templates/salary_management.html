@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salary Management - EMS</title>
+
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">EMS</div>
+
+        <ul class="nav-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="employees_list.html">Employees</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+
+        <div class="mobile-menu" id="menuBtn">&#9776;</div>
+      </div>
+    </nav>
+
+    <ul class="mobile-nav" id="mobileNav">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="employees_list.html">Employees</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+
+    <!-- SALARY HEADER -->
+    <section class="salary-header">
+      <div class="container">
+        <h1>Salary Details</h1>
+        <p>
+          Employee: <span id="salaryEmployeeName" class="highlight"></span> |
+          Organization: <span id="salaryOrgName" class="highlight"></span> |
+          Role: <span id="salaryRole" class="highlight"></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- CURRENT SALARY CARD -->
+    <div class="salary-wrapper">
+      <div class="salary-card">
+        <h2>Current Salary</h2>
+
+        <div id="currentSalaryAmount" class="salary-amount"></div>
+        <p>Last Updated: <strong id="lastUpdated"></strong></p>
+
+        <a href="#" class="salary-update-btn" id="openSalaryForm"
+          >Add Increment</a
+        >
+        <a href="payslip.html" class="salary-update-btn">Generate Payslip</a>
+      </div>
+    </div>
+
+    <!-- INCREMENT HISTORY -->
+    <section class="history-section">
+      <div class="container">
+        <h2>Salary Increment History</h2>
+
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Previous Salary</th>
+              <th>New Salary</th>
+              <th>Increment</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody id="salaryHistoryBody">
+            <!-- Dynamic rows -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ADD INCREMENT POPUP FORM -->
+    <div class="popup-overlay" id="salaryPopup">
+      <div class="popup-card">
+        <h2>Add Salary Increment</h2>
+
+        <form id="salaryIncrementForm">
+          <label>New Salary (₹)</label>
+          <input type="number" id="newSalary" required />
+
+          <label>Date</label>
+          <input type="date" id="incDate" required />
+
+          <label>Reason</label>
+          <textarea
+            id="incReason"
+            placeholder="Example: Performance bonus, annual increment, etc"
+            required
+          ></textarea>
+
+          <div class="btn-group">
+            <button type="submit" class="form-btn">Save</button>
+            <button type="button" id="closeSalaryPopup" class="cancel-btn">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>© 2025 EMS - Employee Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+  </body>
+</html>

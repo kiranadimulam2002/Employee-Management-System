@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee - EMS</title>
+
+    <link rel="stylesheet" href="../static/style.css" />
+
+    
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">EMS</div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="employees_list.html">Employees</a></li>
+                <li><a href="authentication/login.html">Logout</a></li>
+            </ul>
+
+            <div class="mobile-menu" id="menuBtn">&#9776;</div>
+        </div>
+    </nav>
+
+    <ul class="mobile-nav" id="mobileNav">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="employees_list.html">Employees</a></li>
+        <li><a href="authentication/login.html">Logout</a></li>
+    </ul>
+
+    <!-- ADD EMPLOYEE FORM -->
+    <div class="form-wrapper">
+        <div class="form-card wide">
+
+            <h2>Add New Employee</h2>
+
+            <form onsubmit="submitEmployeeForm(event)">
+
+                <!-- Organization -->
+                <select required class="org-select" id="organization">
+                    <option value="" disabled selected>Select Organization</option>
+                    <option value="1">Maple Tech Solutions</option>
+                    <option value="2">Cloud Technologies</option>
+                </select>
+
+                <!-- Name -->
+                <input type="text" id="fullname" placeholder="Full Name" required />
+
+                <!-- Email -->
+                <input type="email" id="email" placeholder="Email Address" required />
+
+                <!-- Phone -->
+                <input type="text" id="phone" placeholder="Phone Number" required />
+
+                <!-- Department -->
+                <select class="emp-select" id="department" required>
+                    <option value="" disabled selected>Select Department</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Finance">Finance</option>
+                </select>
+
+                <!-- Role -->
+                <input type="text" id="role" placeholder="Role / Position" required />
+
+                <!-- Joining Date -->
+                <label class="date-label">Joining Date</label>
+                <input type="date" class="date-input" id="joiningDate" required />
+
+                <!-- Salary -->
+                <input type="number" id="salary" placeholder="Salary (₹)" required />
+
+                <!-- Buttons -->
+                <div class="btn-group">
+                    <button type="submit" class="form-btn">Save Employee</button>
+                    <a href="employees_list.html" class="cancel-btn">Cancel</a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2025 EMS - Employee Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+
+</body>
+</html>

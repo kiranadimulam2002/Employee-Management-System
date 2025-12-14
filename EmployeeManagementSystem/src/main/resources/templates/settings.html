@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - EMS</title>
+
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">EMS</div>
+
+        <ul class="nav-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="employees_list.html">Employees</a></li>
+          <li><a href="salaries_list.html">Salaries</a></li>
+          <li><a href="settings.html" class="active">Settings</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+
+        <div class="mobile-menu" id="menuBtn">&#9776;</div>
+      </div>
+    </nav>
+
+    <ul class="mobile-nav" id="mobileNav">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="employees_list.html">Employees</a></li>
+      <li><a href="salaries_list.html">Salaries</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+
+    <!-- HEADER -->
+    <section class="settings-header">
+      <div class="container">
+        <h1>Settings</h1>
+        <p>Manage user profile, organization details, and security settings</p>
+      </div>
+    </section>
+
+    <!-- SETTINGS GRID -->
+    <section class="settings-section">
+      <div class="container settings-grid">
+        <!-- USER PROFILE SETTINGS -->
+        <div class="settings-card">
+          <h2>User Profile</h2>
+
+          <div class="settings-group">
+            <label>Full Name</label>
+            <input type="text" value="Satya Sai Kiran" />
+          </div>
+
+          <div class="settings-group">
+            <label>Email</label>
+            <input type="email" value="satya@example.com" />
+          </div>
+
+          <div class="settings-group">
+            <label>Phone</label>
+            <input type="text" value="9876543210" />
+          </div>
+
+          <button class="form-btn">Save Changes</button>
+        </div>
+
+        <!-- ORGANIZATION SETTINGS -->
+        <div class="settings-card">
+          <h2>Organization Settings</h2>
+
+          <div class="settings-group">
+            <label>Organization Name</label>
+            <input type="text" value="Maple Tech Solutions" />
+          </div>
+
+          <div class="settings-group">
+            <label>Organization Prefix</label>
+            <input type="text" value="MT" />
+          </div>
+
+          <div class="settings-group">
+            <label>Contact Email</label>
+            <input type="email" value="contact@mapletech.com" />
+          </div>
+
+          <button class="form-btn">Update Organization</button>
+        </div>
+
+        <!-- SECURITY SETTINGS -->
+        <div class="settings-card">
+          <h2>Security</h2>
+
+          <div class="settings-group">
+            <label>Current Password</label>
+            <input type="password" placeholder="Enter current password" />
+          </div>
+
+          <div class="settings-group">
+            <label>New Password</label>
+            <input type="password" placeholder="Enter new password" />
+          </div>
+
+          <div class="settings-group">
+            <label>Confirm New Password</label>
+            <input type="password" placeholder="Re-enter new password" />
+          </div>
+
+          <button class="form-btn">Change Password</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>© 2025 EMS - Employee Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+  </body>
+</html>

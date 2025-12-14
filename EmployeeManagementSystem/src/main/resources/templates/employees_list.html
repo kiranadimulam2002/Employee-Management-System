@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Employees - EMS</title>
+
+    <!-- same path as other pages -->
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR (same pattern) -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">EMS</div>
+
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+
+        <div class="mobile-menu" id="menuBtn">&#9776;</div>
+      </div>
+    </nav>
+
+    <ul class="mobile-nav" id="mobileNav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container">
+        <div class="header-left">
+          <h1>Employees</h1>
+          <p class="muted">List of employees across organizations</p>
+        </div>
+
+        <div class="header-right">
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search by name or email"
+          />
+          <select id="orgFilter">
+            <option value="">All Organizations</option>
+            <option value="Maple Tech Solutions">Maple Tech Solutions</option>
+            <option value="Cloud Technologies">Cloud Technologies</option>
+          </select>
+          <a href="add_employee.html" class="btn-primary small">Add Employee</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLE -->
+    <section class="content-section">
+      <div class="container table-container">
+        <table class="table" id="employeesTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Department</th>
+              <th>Role</th>
+              <th>Salary</th>
+              <th>Organization</th>
+              <th class="actions-col">Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="employeeTableBody">
+            <!-- Rows will be injected dynamically using script.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>© 2025 EMS - Employee Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+  </body>
+</html>

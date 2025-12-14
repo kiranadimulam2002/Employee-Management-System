@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - EMS</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">EMS</div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="employees_list.html">Employees</a></li>
+                <li><a href="salaries_list.html">Salaries</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+
+            <div class="mobile-menu" id="menuBtn">&#9776;</div>
+        </div>
+    </nav>
+
+    <ul class="mobile-nav" id="mobileNav">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="employees_list.html">Employees</a></li>
+        <li><a href="salaries_list.html">Salaries</a></li>
+        <li><a href="login.html">Logout</a></li>
+    </ul>
+
+    <!-- PAGE HEADER -->
+    <section class="analytics-header">
+        <div class="container">
+            <h1>Analytics Dashboard</h1>
+            <p>Employee and Organization Statistics Overview</p>
+        </div>
+    </section>
+
+    <!-- KPI CARDS -->
+    <section class="kpi-section">
+        <div class="container kpi-grid">
+
+            <div class="kpi-card">
+                <h3>Total Employees</h3>
+                <p class="kpi-value">128</p>
+            </div>
+
+            <div class="kpi-card">
+                <h3>Organizations</h3>
+                <p class="kpi-value">2</p>
+            </div>
+
+            <div class="kpi-card">
+                <h3>Total Salary Spend</h3>
+                <p class="kpi-value">₹9,84,000</p>
+            </div>
+
+            <div class="kpi-card">
+                <h3>Avg Salary</h3>
+                <p class="kpi-value">₹41,000</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CHARTS SECTION -->
+    <section class="charts-section">
+        <div class="container chart-grid">
+
+            <!-- BAR CHART BOX -->
+            <div class="chart-card">
+                <h3>Employees Per Organization</h3>
+
+                <div class="bar-chart">
+                    <div class="bar-row">
+                        <span>Maple Tech Solutions</span>
+                        <div class="bar" style="width: 70%;"></div>
+                        <span class="bar-value">90</span>
+                    </div>
+
+                    <div class="bar-row">
+                        <span>Cloud Technologies</span>
+                        <div class="bar" style="width: 30%;"></div>
+                        <span class="bar-value">38</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIE CHART BOX -->
+            <div class="chart-card">
+                <h3>Department Distribution</h3>
+
+                <div class="pie-chart-wrapper">
+                    <div class="pie"></div>
+
+                    <ul class="pie-legend">
+                        <li><span class="legend-color eng"></span>Engineering</li>
+                        <li><span class="legend-color hr"></span>HR</li>
+                        <li><span class="legend-color sales"></span>Sales</li>
+                        <li><span class="legend-color fin"></span>Finance</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <p>© 2025 EMS - Employee Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

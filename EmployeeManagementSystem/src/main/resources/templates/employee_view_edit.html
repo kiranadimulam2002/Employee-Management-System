@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta viewport="width=device-width, initial-scale=1.0" />
+    <title>Employee Details - EMS</title>
+
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">EMS</div>
+
+        <ul class="nav-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="employees_list.html">Employees</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+
+        <div class="mobile-menu" id="menuBtn">&#9776;</div>
+      </div>
+    </nav>
+
+    <ul class="mobile-nav" id="mobileNav">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="employees_list.html">Employees</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+
+    <!-- EMPLOYEE DETAILS CARD -->
+    <div class="form-wrapper">
+      <div class="form-card wide">
+        <h2>Employee Details</h2>
+
+        <a id="salaryPageLink" class="salary-btn">Salary</a>
+        <a id="payslipPageLink" class="salary-btn">Payslip</a>
+
+        <a href="#" class="salary-btn" id="viewTransfersBtn"
+          >Transfer History</a
+        >
+
+        <form id="editEmployeeForm">
+          <!-- Employee ID -->
+          <label class="form-label">Employee ID</label>
+          <input type="text" id="employeeId" class="readonly-input" readonly />
+
+          <!-- Organization -->
+          <label class="form-label">Organization</label>
+          <select class="org-select" id="organization" required>
+            <option value="1">Maple Tech Solutions</option>
+            <option value="2">Cloud Technologies</option>
+          </select>
+
+          <!-- Full Name -->
+          <label class="form-label">Full Name</label>
+          <input type="text" id="fullname" required />
+
+          <!-- Email -->
+          <label class="form-label">Email Address</label>
+          <input type="email" id="email" required />
+
+          <!-- Phone -->
+          <label class="form-label">Phone Number</label>
+          <input type="text" id="phone" required />
+
+          <!-- Department -->
+          <label class="form-label">Department</label>
+          <select class="emp-select" id="department" required>
+            <option value="" disabled>Select Department</option>
+            <option value="Engineering">Engineering</option>
+            <option value="HR">HR</option>
+            <option value="Sales">Sales</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Finance">Finance</option>
+          </select>
+
+          <!-- Role -->
+          <label class="form-label">Role / Position</label>
+          <input type="text" id="role" required />
+
+          <!-- Joining Date -->
+          <label class="form-label">Joining Date</label>
+          <input type="date" id="joiningDate" required />
+
+          <!-- Salary -->
+          <label class="form-label">Salary (₹)</label>
+          <input type="number" id="salary" required />
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="submit" class="form-btn">Save Changes</button>
+            <a href="employees_list.html" class="cancel-btn">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ==================== TRANSFER HISTORY POPUP MODAL ==================== -->
+    <div id="transferHistoryPopup" class="modal">
+      <div class="modal-content">
+        <span id="closeTransferHistory" class="close">&times;</span>
+        <h2>Transfer History</h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Old Organization</th>
+              <th>New Organization</th>
+              <th>Date</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody id="transferHistoryBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- ==================== END OF POPUP MODAL ==================== -->
+    <footer class="footer">
+      <p>© 2025 EMS - Employee Management System. All rights reserved.</p>
+    </footer>
+    <script src="../static/script.js"></script>
+  </body>
+</html>
