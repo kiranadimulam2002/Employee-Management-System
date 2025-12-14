@@ -1,0 +1,14 @@
+# Java
+target/
+*.class
+
+# Spring Boot
+application.properties
+application.yml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
